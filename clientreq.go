@@ -1,6 +1,10 @@
 package main
 
-import "net/http"
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+)
 
 func main() {
 	url1 := "https://www.yahoo.co.jp"
@@ -9,4 +13,8 @@ func main() {
 
 	client := new(http.Client)
 	resp, _ := client.Do(req)
+	defer resp.Body.Close()
+
+	byteArray, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(string(byteArray))
 }
