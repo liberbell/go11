@@ -1,6 +1,9 @@
 package main
 
-import "net/http"
+import (
+	"io/ioutil"
+	"net/http"
+)
 
 func main() {
 	url1 = "https://www.yahoo.co.jp"
@@ -8,4 +11,5 @@ func main() {
 	resp, _ := http.Get(url1)
 	defer resp.Body.close()
 
+	batArray, _ := ioutil.ReadAll(resp.Body)
 }
