@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"net/http"
 )
@@ -12,4 +13,5 @@ func main() {
 	defer resp.Body.close()
 
 	batArray, _ := ioutil.ReadAll(resp.Body)
+	fmt.Println(string(batArray))
 }
