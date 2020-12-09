@@ -10,5 +10,5 @@ func main() {
 	yPtr := new(int)
 	num(yPtr)
 
-	fmt.Println(yPtr)
+	fmt.Println(*yPtr)
 }
