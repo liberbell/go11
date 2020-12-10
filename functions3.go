@@ -8,7 +8,7 @@ func num(yPtr *int) {
 
 func main() {
 	yPtr := new(int)
-	fmt.Println(yPtr)
+	fmt.Println(*yPtr)
 	num(yPtr)
 
 	fmt.Println(*yPtr)
