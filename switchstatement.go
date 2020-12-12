@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	x := 4
+	x := 3
 	fmt.Println("This is ", x)
 	switch x {
 	case 3:
