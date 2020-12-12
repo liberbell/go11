@@ -1,5 +1,11 @@
 package main
 
+import "fmt"
+
 func main() {
-	ß
+	for y := 1; y <= 5; y++ {
+		if y%2 == 0 {
+			fmt.Println(y, "even number")
+		}
+	}
 }
