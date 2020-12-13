@@ -1,7 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
-	z := 0; z <= 5; z++ {
+	for z := 0; z <= 5; z++ {
 		fmt.Println(z)
 	}
 }
